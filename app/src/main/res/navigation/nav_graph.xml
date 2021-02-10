@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.decwujot.countires.presentation.fragments.SplashScreenFragment"
+        android:label="SplashScreenFragment" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_countriesFragment"
+            app:destination="@id/countriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countriesFragment"
+        android:name="com.decwujot.countires.presentation.fragments.CountriesFragment"
+        android:label="CountriesFragment" >
+        <action
+            android:id="@+id/action_countriesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.decwujot.countires.presentation.fragments.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="alphaCode"
+            app:argType="string" />
+    </fragment>
+</navigation>
